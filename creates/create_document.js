@@ -38,15 +38,19 @@ const dynamicFields = async (z, bundle) => {
     ];
   }
 
-  // return copy field if no docTemplateLink
-  if (!automation.googleDocTemplate) {
+  // return copy field if no template (Google Doc, PDF, or Word)
+  if (
+    !automation.googleDocTemplate &&
+    !automation.hasPdfTemplate &&
+    !automation.hasWordTemplate
+  ) {
     return [
       {
         key: 'noDocTemplateLink',
         label: 'Automation has no document template set.',
         type: 'copy',
         helpText:
-          'This automation does not have a Google Doc document template. Please set a document template in the automation settings to proceed.',
+          'This automation does not have a document template. Please set a document template in the automation settings to proceed.',
       },
     ];
   }

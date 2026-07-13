@@ -1,6 +1,6 @@
 {
   "name": "docs-automator",
-  "version": "1.0.5",
+  "version": "1.0.7",
   "description": "DocsAutomator is a powerful document automation platform, leveraging Google Docs for document templates.",
   "homepage": "https://docsautomator.co",
   "author": "Rupert Hoffschmidt-McDonnell <rupert@docsautomator.co>",
